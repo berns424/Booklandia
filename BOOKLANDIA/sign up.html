@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+    background-color: black;
+  } 
+</style>
+<link rel="stylesheet" type="text/css" href="sign up.css"></style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="text-align: center; padding-top: 100px">
+  <h1 class="display-4" style= "color:white">Welcome to<em><span style= "font-family:mv boli; color:pink; font-size: 350%">BOOKLANDIA</span></em></h1>
+<p style= "color:white">Click on the button at the bottom of this page to open the login form.</p>
+<button class="open-button" onclick="openForm()">Open Form</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn"><a href="website.html">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Register</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>
